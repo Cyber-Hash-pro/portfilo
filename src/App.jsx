@@ -1,8 +1,7 @@
 /**
  * App - Main composition of all sections
- * 
- * Simple, clean structure - each section is self-contained
- * No routing needed for single-page portfolio
+ * MagicTeal inspired portfolio for Nilesh Patil
+ * Full-Stack & AI Developer
  */
 
 import Header from "./components/layout/Header";
@@ -16,7 +15,7 @@ import Contact from "./components/sections/Contact";
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-dark">
       <Header />
 
       <main>
