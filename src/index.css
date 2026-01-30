@@ -54,6 +54,17 @@
     @apply bg-dark text-gray-300 font-sans leading-relaxed;
   }
 
+  /* Custom cursor - hide default on desktop */
+  @media (pointer: fine) {
+    body {
+      cursor: none;
+    }
+    
+    a, button, input, textarea, select, [role="button"] {
+      cursor: none;
+    }
+  }
+
   /* Strong heading hierarchy */
   h1,
   h2,

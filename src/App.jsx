@@ -14,12 +14,16 @@ import Capabilities from "./components/sections/Capabilities";
 import Experience from "./components/sections/Experience";
 import Contact from "./components/sections/Contact";
 import LoadingScreen from "./components/ui/LoadingScreen";
+import MouseFollower from "./components/ui/MouseFollower";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
     <>
+      {/* Custom Mouse Follower */}
+      {!isLoading && <MouseFollower />}
+
       {/* Loading Screen */}
       {isLoading && (
         <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />
