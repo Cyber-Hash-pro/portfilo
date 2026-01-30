@@ -4,6 +4,7 @@
  * Full-Stack & AI Developer
  */
 
+import { useState } from "react";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import Intro from "./components/sections/Intro";
@@ -12,23 +13,36 @@ import Projects from "./components/sections/Projects";
 import Capabilities from "./components/sections/Capabilities";
 import Experience from "./components/sections/Experience";
 import Contact from "./components/sections/Contact";
+import LoadingScreen from "./components/ui/LoadingScreen";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
-    <div className="min-h-screen bg-dark">
-      <Header />
+    <>
+      {/* Loading Screen */}
+      {isLoading && (
+        <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />
+      )}
 
-      <main>
-        <Intro />
-        <About />
-        <Projects />
-        <Capabilities />
-        <Experience />
-        <Contact />
-      </main>
+      {/* Main Content */}
+      <div className={`min-h-screen bg-dark transition-opacity duration-500 ${
+        isLoading ? "opacity-0" : "opacity-100"
+      }`}>
+        <Header />
 
-      <Footer />
-    </div>
+        <main>
+          <Intro />
+          <About />
+          <Projects />
+          <Capabilities />
+          <Experience />
+          <Contact />
+        </main>
+
+        <Footer />
+      </div>
+    </>
   );
 }
 

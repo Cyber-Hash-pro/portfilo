@@ -1,5 +1,6 @@
 import Container from "../ui/Container";
 import { siteConfig, contact } from "../../data/content";
+import { LogoMark } from "../ui/Logo";
 
 /**
  * Footer - MagicTeal inspired premium footer
@@ -40,9 +41,7 @@ export default function Footer() {
                         {/* Brand */}
                         <div className="lg:col-span-2">
                             <a href="#" className="flex items-center gap-3 mb-6">
-                                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal to-cyan-400 flex items-center justify-center text-white font-bold text-xl">
-                                    N
-                                </div>
+                                <LogoMark size={48} />
                                 <div>
                                     <span className="text-white font-bold text-xl block">
                                         {siteConfig.name}

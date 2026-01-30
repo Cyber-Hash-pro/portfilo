@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { siteConfig } from "../../data/content";
+import { LogoMark } from "../ui/Logo";
 
 /**
  * Header - MagicTeal inspired premium navigation
@@ -38,10 +39,10 @@ export default function Header() {
                     {/* Logo / Name */}
                     <a
                         href="#"
-                        className="flex items-center gap-2 group"
+                        className="flex items-center gap-3 group"
                     >
-                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-teal to-cyan-400 flex items-center justify-center text-white font-bold text-lg transition-transform duration-300 group-hover:scale-110">
-                            N
+                        <div className="transition-transform duration-300 group-hover:scale-110">
+                            <LogoMark size={40} />
                         </div>
                         <span className="text-white font-semibold text-lg tracking-tight hidden sm:block">
                             {siteConfig.name.split(' ')[0]}
