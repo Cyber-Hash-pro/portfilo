@@ -1,5 +1,6 @@
 import Container from "../ui/Container";
 import Section from "../ui/Section";
+import ScrollReveal from "../ui/ScrollReveal";
 import { skills } from "../../data/content";
 
 /**
@@ -47,59 +48,64 @@ export default function Capabilities() {
             
             <Container className="relative z-10">
                 {/* Section header */}
-                <div className="text-center mb-16">
-                    <span className="inline-block px-4 py-1.5 bg-teal/10 border border-teal/30 rounded-full text-teal text-sm font-medium mb-4">
-                        {skills.title}
-                    </span>
-                    <h2 className="text-white mb-4">{skills.subtitle}</h2>
-                </div>
+                <ScrollReveal animation="fadeUp">
+                    <div className="text-center mb-16">
+                        <span className="inline-block px-4 py-1.5 bg-teal/10 border border-teal/30 rounded-full text-teal text-sm font-medium mb-4">
+                            {skills.title}
+                        </span>
+                        <h2 className="text-white mb-4">{skills.subtitle}</h2>
+                    </div>
+                </ScrollReveal>
 
                 {/* Skills grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {skills.categories.map((category, index) => (
-                        <div
-                            key={index}
-                            className="group p-6 bg-surface border border-border rounded-2xl hover:border-teal/30 transition-all duration-500 hover:shadow-[0_0_20px_rgba(20,184,166,0.1)]"
-                        >
-                            {/* Category header */}
-                            <div className="flex items-center gap-4 mb-6">
-                                <div className="w-14 h-14 bg-gradient-to-br from-teal/20 to-cyan-500/10 rounded-xl flex items-center justify-center text-teal group-hover:scale-110 transition-transform duration-300">
-                                    {icons[category.icon]}
+                        <ScrollReveal key={index} animation="scale" delay={index * 100}>
+                            <div
+                                className="group p-6 bg-surface border border-border rounded-2xl hover:border-teal/30 transition-all duration-500 hover:shadow-[0_0_20px_rgba(20,184,166,0.1)] h-full"
+                            >
+                                {/* Category header */}
+                                <div className="flex items-center gap-4 mb-6">
+                                    <div className="w-14 h-14 bg-gradient-to-br from-teal/20 to-cyan-500/10 rounded-xl flex items-center justify-center text-teal group-hover:scale-110 transition-transform duration-300">
+                                        {icons[category.icon]}
+                                    </div>
+                                    <h3 className="text-white font-semibold text-lg">
+                                        {category.name}
+                                    </h3>
                                 </div>
-                                <h3 className="text-white font-semibold text-lg">
-                                    {category.name}
-                                </h3>
-                            </div>
 
-                            {/* Skills tags */}
-                            <div className="flex flex-wrap gap-2">
-                                {category.skills.map((skill, skillIndex) => (
-                                    <span
-                                        key={skillIndex}
-                                        className="px-3 py-1.5 bg-dark border border-border rounded-lg text-gray-400 text-sm hover:border-teal/30 hover:text-teal transition-all duration-300"
-                                    >
-                                        {skill}
-                                    </span>
-                                ))}
+                                {/* Skills tags */}
+                                <div className="flex flex-wrap gap-2">
+                                    {category.skills.map((skill, skillIndex) => (
+                                        <span
+                                            key={skillIndex}
+                                            className="px-3 py-1.5 bg-dark border border-border rounded-lg text-gray-400 text-sm hover:border-teal/30 hover:text-teal transition-all duration-300"
+                                        >
+                                            {skill}
+                                        </span>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
+                        </ScrollReveal>
                     ))}
                 </div>
 
                 {/* Languages section */}
-                <div className="mt-12 text-center">
-                    <p className="text-gray-500 mb-4">Languages</p>
-                    <div className="flex flex-wrap justify-center gap-3">
-                        {skills.languages.map((lang, index) => (
-                            <span
-                                key={index}
-                                className="px-5 py-2 bg-gradient-to-r from-teal/10 to-cyan-500/10 border border-teal/20 rounded-full text-teal font-medium"
-                            >
-                                {lang}
-                            </span>
-                        ))}
+                <ScrollReveal animation="fadeUp" delay={600}>
+                    <div className="mt-12 text-center">
+                        <p className="text-gray-500 mb-4">Languages</p>
+                        <div className="flex flex-wrap justify-center gap-3">
+                            {skills.languages.map((lang, index) => (
+                                <span
+                                    key={index}
+                                    className="px-5 py-2 bg-gradient-to-r from-teal/10 to-cyan-500/10 border border-teal/20 rounded-full text-teal font-medium"
+                                >
+                                    {lang}
+                                </span>
+                            ))}
+                        </div>
                     </div>
-                </div>
+                </ScrollReveal>
             </Container>
         </Section>
     );
