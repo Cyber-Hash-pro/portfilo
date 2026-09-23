@@ -10,6 +10,9 @@ export const siteConfig = {
     phone: "+91-7972590399",
     linkedin: "https://linkedin.com/in/nilesh-patil-451637322",
     github: "https://github.com/Cyber-Hash-pro",
+    instagram: "https://www.instagram.com/nilesh_patil_954/",
+    calcom: "https://cal.com/nilesh-patil-vv3gv3/15min?overlayCalendar=true",
+    website: "https://cyberhash.me",
 };
 
 export const intro = {
@@ -27,11 +30,15 @@ export const intro = {
             label: "Get In Touch",
             href: "#contact",
         },
+        github: {
+            label: "GitHub",
+            href: "https://github.com/Cyber-Hash-pro",
+        },
     },
     stats: [
-        { value: "40%", label: "Downtime Reduction" },
-        { value: "60%", label: "Faster Discovery" },
-        { value: "35%", label: "Accuracy Boost" },
+        { value: "6+", label: "Apps Shipped" },
+        { value: "1000+", label: "Concurrent Users" },
+        { value: "99.9%", label: "Uptime" },
     ],
 };
 
@@ -41,7 +48,7 @@ export const about = {
     narrative: [
         "I'm a Full-Stack Developer specializing in AI-powered platforms, real-time systems, and scalable microservices architectures. I don't just write code—I build production-grade applications that handle real users and deliver measurable impact.",
         "My expertise spans building AI conversational systems with mood detection, e-commerce marketplaces with 1000+ concurrent users, and chat applications with RAG-powered semantic search. I've architected Docker-based microservices, implemented event-driven workflows with RabbitMQ, and secured platforms with JWT, OAuth, and RBAC authentication.",
-        "Currently pursuing my B.Tech in Computer Science at G H Raisoni College of Engineering and Management. I believe in shipping fast, learning continuously, and building systems that don't break under pressure.",
+        "Currently interning at Creuto Cloud Private Limited and pursuing my B.Tech in Computer Science at G H Raisoni College of Engineering and Management. I believe in shipping fast, learning continuously, and building systems that don't break under pressure.",
     ],
     highlights: [
         { icon: "code", label: "Full-Stack Development" },
@@ -111,7 +118,7 @@ export const skills = {
         {
             name: "Backend",
             icon: "backend",
-            skills: ["Node.js", "Express.js", "MongoDB", "PostgreSQL", "Prisma ORM", "Redis", "Socket.IO"],
+            skills: ["Node.js", "Express.js", "NestJS", "MongoDB", "PostgreSQL", "Prisma ORM", "Redis", "Socket.IO"],
         },
         {
             name: "AI / ML",
@@ -126,7 +133,7 @@ export const skills = {
         {
             name: "Architecture",
             icon: "architecture",
-            skills: ["Microservices", "Event-Driven Systems", "REST APIs", "WebSockets", "RabbitMQ"],
+            skills: ["Microservices", "Event-Driven Systems", "REST APIs", "WebSockets", "RabbitMQ", "BullMQ", "ClickHouse"],
         },
         {
             name: "Security",
@@ -150,9 +157,9 @@ export const capabilities = [
     {
         domain: "Backend & Infrastructure",
         skills: [
-            "Node.js, Express.js, and RESTful API design",
-            "MongoDB, PostgreSQL, and Prisma ORM",
-            "Redis caching and Socket.IO real-time",
+            "Node.js, NestJS, Express.js, and RESTful API design",
+            "MongoDB, PostgreSQL, ClickHouse (OLAP) and Prisma ORM",
+            "Redis caching, BullMQ queues and Socket.IO real-time",
             "Docker, AWS EC2, and CI/CD pipelines",
         ],
     },
@@ -170,12 +177,38 @@ export const capabilities = [
 export const experience = [
     {
         id: 1,
+        role: "Software Development Engineer — Intern",
+        company: "Creuto Cloud Private Limited",
+        companyUrl: "https://creuto.com",
+        period: "January 2026 — Present",
+        projects: [
+            {
+                name: "Edverise Platform — API & Analytics Engine",
+                tech: "NestJS 11 · TypeScript · MongoDB · ClickHouse · RabbitMQ · AWS S3 · Docker · GitHub Actions CI/CD",
+            },
+            {
+                name: "Creuto Sales CRM & MML/Brabima — Lead Management + Notification Engine",
+                tech: "NestJS 11 · FeathersJS · TypeScript · MongoDB · Redis · BullMQ · Zod v4 · Firebase FCM",
+            },
+        ],
+        description: "Architecting scalable backend systems at Creuto Cloud — from scratch. Built 30+ service modules, 50+ REST APIs and a full multi-tenant Sales CRM with pipeline workflows, org-level RBAC, and real-time notification systems.",
+        highlights: [
+            "Cut manual workflows 41% and raised data accuracy 48%",
+            "Zero message loss via fault-tolerant RabbitMQ AMQP layer",
+            "BullMQ + Redis broadcast notification system (500 users/batch)",
+            "ClickHouse OLAP microservice — 12+ analytics queries",
+        ],
+    },
+    {
+        id: 2,
         role: "Full-Stack & AI Developer",
         company: "Independent Projects",
+        companyUrl: "https://github.com/Cyber-Hash-pro",
         period: "2023 — Present",
+        projects: [],
         description: "Building production-grade AI-powered applications including music platforms, e-commerce marketplaces, and conversational AI systems. Architecting microservices handling 1000+ concurrent users with 99.9% uptime.",
         highlights: [
-            "Shipped 3 production AI applications",
+            "Shipped 6+ production applications from scratch",
             "40% reduction in deployment downtime",
             "35% improvement in AI retrieval accuracy",
         ],
@@ -200,7 +233,7 @@ export const certifications = [
         subtitle: "(Frontend, Backend, DevOps)",
         issuer: "Sheryians Coding School",
         year: "2025",
-        credentialId: "98084d600",
+        credentialId: "9808d600",
     },
 ];
 
@@ -211,8 +244,11 @@ export const contact = {
     email: "np103177@gmail.com",
     phone: "+91-7972590399",
     availability: "Open to full-time opportunities and exciting freelance projects.",
+    calcom: "https://cal.com/nilesh-patil-vv3gv3/15min?overlayCalendar=true",
+    web3formsKey: "5d380131-c47b-4b8a-9cd8-57df5a81d5fa",
     social: {
         github: "https://github.com/Cyber-Hash-pro",
         linkedin: "https://linkedin.com/in/nilesh-patil-451637322",
+        instagram: "https://www.instagram.com/nilesh_patil_954/",
     },
 };
