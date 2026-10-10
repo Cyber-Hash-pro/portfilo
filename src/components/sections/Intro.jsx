@@ -29,7 +29,6 @@ export default function Intro() {
             <Container className="relative z-10">
                 <div className="max-w-4xl">
 
-
                     {/* Greeting badge */}
                     <div className="inline-flex items-center gap-2 px-4 py-2 bg-surface border border-border rounded-full mb-8 animate-fade-in-up animation-delay-100">
                         <span className="w-2 h-2 bg-teal rounded-full animate-pulse" />

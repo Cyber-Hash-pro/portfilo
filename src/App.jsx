@@ -15,6 +15,7 @@ import Experience from "./components/sections/Experience";
 import Contact from "./components/sections/Contact";
 import LoadingScreen from "./components/ui/LoadingScreen";
 import MouseFollower from "./components/ui/MouseFollower";
+import ProfileAvatar from "./components/ui/ProfileAvatar";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -45,6 +46,11 @@ function App() {
         </main>
 
         <Footer />
+        
+        {/* Floating Avatar Assistant */}
+        <div className="fixed bottom-6 right-6 z-50 w-14 h-14 md:w-16 md:h-16 animate-fade-in-up animation-delay-500 pointer-events-auto">
+          <ProfileAvatar className="w-full h-full" />
+        </div>
       </div>
     </>
   );
